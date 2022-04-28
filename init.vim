@@ -14,6 +14,7 @@ nnoremap <leader>] :bNext<CR>
 nnoremap <leader>q :w<CR>:bd<CR>
 nmap <c-s> :w<CR>
 imap <c-s> <Esc>:w<CR>a
+tnoremap <Esc> <C-\><C-n>
 
 " <<< START PLUGINS >>>
 
