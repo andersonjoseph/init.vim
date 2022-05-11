@@ -6,7 +6,6 @@ source $VIMRUNTIME/mswin.vim
 set number
 let &guifont = "Cascadia Code:h13"
 set clipboard^=unnamed,unnamedplus
-cd $USERPROFILE
 
 nnoremap <CR> :noh<CR><CR>
 nnoremap <leader>[ :bprevious<CR>
