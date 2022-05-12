@@ -9,7 +9,7 @@ set clipboard^=unnamed,unnamedplus
 
 nnoremap <CR> :noh<CR><CR>
 nnoremap <leader>[ :bprevious<CR>
-nnoremap <leader>] :bNext<CR>
+nnoremap <leader>] :bn<CR>
 nnoremap <leader>q :bn<CR>:bd#<CR>
 nmap <c-s> :w<CR>
 imap <c-s> <Esc>:w<CR>a
