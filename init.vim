@@ -30,6 +30,8 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'nvim-lualine/lualine.nvim'
 Plug 'maxmellon/vim-jsx-pretty'
 
+Plug 'tikhomirov/vim-glsl'
+
 call plug#end()
 
 " <<< ENDPLUGINS >>>
