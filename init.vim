@@ -28,6 +28,7 @@ Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 Plug 'nvim-lualine/lualine.nvim'
+Plug 'maxmellon/vim-jsx-pretty'
 
 call plug#end()
 
