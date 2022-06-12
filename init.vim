@@ -23,7 +23,7 @@ Plug 'kyazdani42/nvim-tree.lua'
 
 Plug 'ctrlpvim/ctrlp.vim'
 
-Plug 'cormacrelf/vim-colors-github'
+Plug 'mangeshrex/everblush.vim'
 
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
@@ -37,17 +37,9 @@ call plug#end()
 " <<< ENDPLUGINS >>>
 
 " <<< START COLOR SCHEMA >>>
-"
-" use a slightly darker background, like GitHub inline code blocks
-let g:github_colors_soft = 0
+let g:everblushNR=1 " default
 
-" use the dark theme
-set background=dark
-
-" more blocky diff markers in signcolumn (e.g. GitGutter)
-let g:github_colors_block_diffmark = 0
-
-colorscheme github
+colorscheme everblush
 
 " <<< END COLOR SCHEMA >>>
 
