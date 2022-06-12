@@ -23,7 +23,7 @@ Plug 'kyazdani42/nvim-tree.lua'
 
 Plug 'ctrlpvim/ctrlp.vim'
 
-Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
+Plug 'cormacrelf/vim-colors-github'
 
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
@@ -38,9 +38,8 @@ call plug#end()
 
 " <<< START COLOR SCHEMA >>>
 
-let g:tokyonight_style = "night"
-let g:tokyonight_italic_functions = 0
-let g:tokyonight_italic_keywords = 0
+" use the dark theme
+set background=dark
 
 colorscheme tokyonight
 
