@@ -23,7 +23,7 @@ Plug 'kyazdani42/nvim-tree.lua'
 
 Plug 'ctrlpvim/ctrlp.vim'
 
-Plug 'mangeshrex/everblush.vim'
+Plug 'ellisonleao/gruvbox.nvim'
 
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
@@ -37,9 +37,8 @@ call plug#end()
 " <<< ENDPLUGINS >>>
 
 " <<< START COLOR SCHEMA >>>
-let g:everblushNR=1 " default
-
-colorscheme everblush
+set background=dark " or light if you want light mode
+colorscheme gruvbox
 
 " <<< END COLOR SCHEMA >>>
 
