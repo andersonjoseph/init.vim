@@ -23,7 +23,7 @@ Plug 'kyazdani42/nvim-tree.lua'
 
 Plug 'ctrlpvim/ctrlp.vim'
 
-Plug 'ellisonleao/gruvbox.nvim'
+Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
 
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
@@ -37,8 +37,9 @@ call plug#end()
 " <<< ENDPLUGINS >>>
 
 " <<< START COLOR SCHEMA >>>
-set background=dark " or light if you want light mode
-colorscheme gruvbox
+let g:tokyonight_style = "night"
+let g:tokyonight_italic_functions = 1
+colorscheme tokyonight
 
 " <<< END COLOR SCHEMA >>>
 
