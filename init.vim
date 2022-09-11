@@ -15,7 +15,10 @@ nmap <c-s> :w<CR>
 imap <c-s> <Esc>:w<CR>a
 tnoremap <Esc> <C-\><C-n>
 
-" <<< START PLUGINS >>>
+" Run PlugInstall if there are missing plugins
+autocmd VimEnter * if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
+  \| PlugInstall --sync | source $MYVIMRC | CocInstall coc-tsserver
+\| endif
 
 call plug#begin()
 Plug 'kyazdani42/nvim-web-devicons'
