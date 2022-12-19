@@ -4,6 +4,7 @@ set ignorecase
 set mouse=a
 source $VIMRUNTIME/mswin.vim
 set number
+set relativenumber
 let &guifont = "Cascadia Code:h13"
 set clipboard^=unnamed,unnamedplus
 
@@ -26,35 +27,44 @@ Plug 'kyazdani42/nvim-tree.lua'
 
 Plug 'ctrlpvim/ctrlp.vim'
 
-Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
+Plug 'Yazeed1s/minimal.nvim'
 
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 Plug 'nvim-lualine/lualine.nvim'
 Plug 'maxmellon/vim-jsx-pretty'
 
-Plug 'tikhomirov/vim-glsl'
-
 call plug#end()
 
 " <<< ENDPLUGINS >>>
 
 " <<< START COLOR SCHEMA >>>
-let g:tokyonight_style = "night"
-let g:tokyonight_italic_functions = 1
-colorscheme tokyonight
+"
+colorscheme minimal
 
 " <<< END COLOR SCHEMA >>>
 
 " <<< START NVIM TREE SET UP >>>
-lua<<EOF
-require'nvim-tree'.setup {}
+
+lua << EOF
+
+-- disable netrw at the very start of your init.lua (strongly advised)
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
+
+-- set termguicolors to enable highlight groups
+vim.opt.termguicolors = true
+
+require("nvim-tree").setup()
+
 EOF
+
 
 nnoremap <C-n> :NvimTreeToggle<CR>
 nnoremap <leader>r :NvimTreeRefresh<CR>
 nnoremap <leader>n :NvimTreeFindFile<CR>
 set termguicolors
+
 " <<< END NVIM TREE SET UP >>>
 
 " <<< START CTRLP >>>
