@@ -27,7 +27,7 @@ Plug 'kyazdani42/nvim-tree.lua'
 
 Plug 'ctrlpvim/ctrlp.vim'
 
-Plug 'Yazeed1s/minimal.nvim'
+Plug 'shaunsingh/nord.nvim'
 
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
@@ -39,8 +39,10 @@ call plug#end()
 " <<< ENDPLUGINS >>>
 
 " <<< START COLOR SCHEMA >>>
-"
-colorscheme minimal
+let g:nord_contrast = v:true
+let g:nord_borders = v:true
+
+colorscheme nord
 
 " <<< END COLOR SCHEMA >>>
 
@@ -200,6 +202,11 @@ nnoremap <silent><nowait> <space>a  :<C-u>CocList diagnostics<cr>
 
 lua << EOF
 require('lualine').setup {
+
+options = {
+  theme = 'nord'
+},
+
 sections = {
   lualine_a = {'mode'},
   lualine_b = {'buffers'},
