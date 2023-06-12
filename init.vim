@@ -70,7 +70,7 @@ set termguicolors
 " <<< END NVIM TREE SET UP >>>
 
 " <<< START CTRLP >>>
-let g:ctrlp_custom_ignore = '\v[\/](node_modules|target|dist)|(\.(swp|ico|git|svn))$'
+let g:ctrlp_custom_ignore = '\v[\/](node_modules|target|dist|build)|(\.(swp|ico|git|svn))$'
 " <<< END CTRLP >>>
 
 
@@ -220,3 +220,5 @@ sections = {
 EOF
 
 " <<< END LUALINE >>>
+
+autocmd BufNewFile,BufRead *.hbs set filetype=html
