@@ -5,3 +5,5 @@ vim.keymap.set('n', '<leader>q', ':bn<CR>:bd#<CR>')
 vim.keymap.set('n', '<c-s>', ':w<CR>')
 
 vim.keymap.set('i', '<c-s>', '<Esc>:w<CR>')
+
+vim.keymap.set('t', '<Esc>', '<C-\\><C-n>')
