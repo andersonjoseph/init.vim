@@ -1,9 +1,11 @@
 return {
-  "shaunsingh/nord.nvim",
-  config = function ()
-    vim.g.nord_contrast = true
-    vim.g.nord_borders = false
-
-    vim.cmd("colorscheme nord")
-  end;
+  "neanias/everforest-nvim",
+  version = false,
+  lazy = false,
+  priority = 1000, -- make sure to load this before all the other start plugins
+  config = function()
+    require("everforest").setup({
+      vim.cmd("colorscheme everforest")
+    })
+  end,
 }
