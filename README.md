@@ -1,53 +1,47 @@
 # My neovim Config
 
-![screenshot](https://i.imgur.com/43SikL3.png)
-
-My minimal config for neovim, I primarly use it with Neovim-qt on Windows so this config is designed to give a conventional IDE-like experience (Mouse enabled, Ctrl+S for save, Ctrl-c for copy, Ctrl-v for paste, etc...)
-
 ---
 
 Leader key: `,`
 
 ---
 
-## Useful shortcuts
+## Color Scheme
 
-This are the shortcuts I use the most. There are a lot of other shortcuts mapped by default from the plugin, those can be found in their respective docs.
+[everforest-nvim](https://github.com/neanias/everforest-nvim)
 
-- Next buffer
-`<leader>]`
+![screenshot](https://i.imgur.com/SeQgQG6.png)
 
-- Previous buffer
-`<leader>[`
+## General Settings
 
-- Close buffer
-`<leader>q`
+| Type | Setting | Value | Description |
+|------|---------|-------|-------------|
+| Global | `guifont` | `"Cascadia Code:h13"` | Sets the GUI font |
+| Option | `shiftwidth` | `2` | Sets the number of spaces used for each step of (auto)indent |
+| Option | `ignorecase` | `true` | Ignores case in search patterns |
+| Option | `number` | `true` | Displays line numbers |
+| Option | `relativenumber` | `true` | Displays line numbers relative to the cursor |
 
-- Save
-`<c-s>`
+## General Mappings
 
-- Fuzzy Finder
-`<c-p>`
-
-- Toggle File Tree
-`<c-n>`
-
-- Copy and paste
-`<c-c>` | `<c-v>`
-
-- Typescript docs for current identifier
-`K`
-
-- Rename symbol
-`<leader>rn`
+| Mode | Key Combination | Description | Command |
+|------|-----------------|-------------|---------|
+| Normal | `<CR>` | Clears the search highlight | `:noh<CR><CR>` |
+| Normal | `<leader>[` | Switches to the previous buffer | `:bprevious<CR>` |
+| Normal | `<leader>]` | Switches to the next buffer | `:bn<CR>` |
+| Normal | `<leader>q` | Closes the current buffer and switches to the next one | `:bn<CR>:bd#<CR>` |
+| Normal | `<c-s>` | Saves the current file | `:w<CR>` |
+| Insert | `<c-s>` | Exits insert mode and saves the current file | `<Esc>:w<CR>` |
+| Terminal | `<Esc>` | Exits terminal mode | `<C-\\><C-n>` |
 
 
 ## Plugins
 
-- Plugin Manager: [Vim-Plug](https://github.com/junegunn/vim-plug)
-- Autocompletion: [Coc Server](https://github.com/neoclide/coc.nvim) + [Coc Typescript](https://github.com/neoclide/coc-tsserver)
-- Status Line: [Lua Line](https://github.com/nvim-lualine/lualine.nvim)
-- Fuzzy Finder: [CTRLP](https://github.com/kien/ctrlp.vim)
-- File Tree: [NvimTree](https://github.com/kyazdani42/nvim-tree.lua)
-- Color Schema: [tokyonight](https://github.com/folke/tokyonight.nvim) (night style)
+| Plugin | Description | Link |
+|--------|-------------|------|
+| nvim coc (currently using coc-tsserver for typescript and coc-go for golang) | A Node.js extension host for Vim & Neovim, loading extensions like VSCode and hosting language servers. | [GitHub](https://github.com/neoclide/coc.nvim) |
+| ctrl-p | A fuzzy file search plugin for Vim. | [GitHub](https://github.com/kien/ctrlp.vim) |
+| lualine | A blazing fast and easy to configure Neovim statusline plugin written in Lua. | [GitHub](https://github.com/nvim-lualine/lualine.nvim) |
+| nvim-web-devicons | A Lua fork of vim-devicons for Neovim, providing file icons. | [GitHub](https://github.com/nvim-tree/nvim-web-devicons) |
+| nvim-tree | A file explorer tree for Neovim written in Lua. | [GitHub](https://github.com/nvim-tree/nvim-tree.lua) |
 
