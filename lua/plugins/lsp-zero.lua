@@ -7,6 +7,7 @@ return {
 
       lsp_zero.on_attach(function(client, bufnr)
 	lsp_zero.default_keymaps({buffer = bufnr})
+	vim.keymap.set('n', '<leader>ca', '<cmd>lua vim.lsp.buf.code_action()<CR>')
       end)
 
       lsp_zero.set_sign_icons({
