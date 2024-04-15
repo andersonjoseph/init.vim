@@ -46,6 +46,7 @@ return {
     'neovim/nvim-lspconfig',
   },
   {'hrsh7th/cmp-nvim-lsp'},
+  {'hrsh7th/cmp-nvim-lsp-signature-help'},
   {
     'hrsh7th/nvim-cmp',
     config = function()
@@ -56,6 +57,7 @@ return {
 	sources = {
 	  {name = 'path'},
 	  {name = 'nvim_lsp'},
+	  {name = "nvim_lsp_signature_help"},
 	  {name = 'luasnip', keyword_length = 2},
 	  {name = 'buffer', keyword_length = 3},
 	},
