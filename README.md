@@ -1,11 +1,5 @@
 # My neovim Config
 
----
-
-Leader key: `,`
-
----
-
 ## Color Scheme
 
 [everforest-nvim](https://github.com/neanias/everforest-nvim)
@@ -24,22 +18,31 @@ Leader key: `,`
 
 ## General Mappings
 
-| Mode | Key Combination | Description | Command |
-|------|-----------------|-------------|---------|
-| Normal | `<CR>` | Clears the search highlight | `:noh<CR><CR>` |
-| Normal | `<leader>[` | Switches to the previous buffer | `:bprevious<CR>` |
-| Normal | `<leader>]` | Switches to the next buffer | `:bn<CR>` |
-| Normal | `<leader>q` | Closes the current buffer and switches to the next one | `:bn<CR>:bd#<CR>` |
-| Normal | `<c-s>` | Saves the current file | `:w<CR>` |
-| Insert | `<c-s>` | Exits insert mode and saves the current file | `<Esc>:w<CR>` |
-| Terminal | `<Esc>` | Exits terminal mode | `<C-\\><C-n>` |
+> Leader key: `,`
+
+| Mode | Key Combination | Description |
+|------|-----------------|-------------|
+| Normal | `K`  | Trigger LSP hover information for the symbol under the cursor. |
+| Normal | `<CR>` | Clears the search highlight |
+| Normal | `<leader>[` | Switches to the previous buffer |
+| Normal | `<leader>]` | Switches to the next buffer |
+| Normal | `<leader>q` | Closes the current buffer and switches to the next one |
+| Normal | `<c-s>` | Saves the current file |
+| Insert | `<c-s>` | Exits insert mode and saves the current file |
+| Terminal | `<Esc>` | Exits terminal mode |
+| Normal | `<leader>ca` | Execute code actions suggested by the LSP server. |
+| Normal | `<leader>rn` | Rename the symbol under the cursor using LSP capabilities. |
+| Normal | `<leader>gd` | Jump to the definition of the symbol under the cursor. |
+| Normal | `<leader>gi` | Jump to the implementation of the symbol under the cursor. |
+| Normal | `<leader>vr` | Find all references to the symbol under the cursor using LSP. |
+| Normal | `<leader>vd` | Open the diagnostic window to view code errors and warnings. |
 
 
 ## Plugins
 
 | Plugin | Description | Link |
 |--------|-------------|------|
-| nvim coc (currently using coc-tsserver for typescript and coc-go for golang) | A Node.js extension host for Vim & Neovim, loading extensions like VSCode and hosting language servers. | [GitHub](https://github.com/neoclide/coc.nvim) |
+| lsp-zero.nvim | A starting point to setup some lsp related features in neovim. | [GitHub](https://github.com/VonHeikemen/lsp-zero.nvim) |
 | ctrl-p | A fuzzy file search plugin for Vim. | [GitHub](https://github.com/kien/ctrlp.vim) |
 | lualine | A blazing fast and easy to configure Neovim statusline plugin written in Lua. | [GitHub](https://github.com/nvim-lualine/lualine.nvim) |
 | nvim-web-devicons | A Lua fork of vim-devicons for Neovim, providing file icons. | [GitHub](https://github.com/nvim-tree/nvim-web-devicons) |
