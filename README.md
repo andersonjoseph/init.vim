@@ -36,6 +36,8 @@
 | Normal | `<leader>gi` | Jump to the implementation of the symbol under the cursor. |
 | Normal | `<leader>vr` | Find all references to the symbol under the cursor using LSP. |
 | Normal | `<leader>vd` | Open the diagnostic window to view code errors and warnings. |
+| Normal | `<leader>y` | Copy to system clipboard |
+| Normal | `<leader>p` | Paste from system clipboard |
 
 
 ## Plugins
