@@ -1,15 +1,12 @@
 return {
   'nvim-lualine/lualine.nvim',
   config = function()
-    local noirbuddy_lualine = require("noirbuddy.plugins.lualine")
-    local theme = noirbuddy_lualine.theme
+    local kanagawa_paper = require("lualine.themes.kanagawa-paper")
 
     require('lualine').setup {
-
       options = {
-	theme = theme,
+	theme = kanagawa_paper,
 	icons_enabled = true,
-	theme = theme,
 	filetype = { colored = true },
       },
 
