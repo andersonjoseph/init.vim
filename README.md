@@ -2,9 +2,9 @@
 
 ## Color Scheme
 
-[everforest-nvim](https://github.com/neanias/everforest-nvim)
+[kanagawa](https://github.com/rebelot/kanagawa.nvim)
 
-![screenshot](https://i.imgur.com/SeQgQG6.png)
+![screenshot](https://i.imgur.com/JhCthBr.png)
 
 ## General Settings
 
